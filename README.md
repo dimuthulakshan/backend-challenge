@@ -8,7 +8,7 @@
 
 <p>
   As a developer of Phygiworld you are tasked to implement the core middleware
-  function that runs when a user scans a QR code.<br />
+  endpoint that runs when a user scans a QR code.<br />
   This function receives the QR code ID as an input and should redirect to the URL that
   is configured in the related campaign.</p>
 
