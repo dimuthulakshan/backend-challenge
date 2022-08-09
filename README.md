@@ -40,6 +40,8 @@ You can test the API by opening:
 
 <p>
   Modify the endpoint logic so that:
-  - if the campaign is in status "running", redirect using the redirect_url column
-  - if the campaign is in status "stopped", redirect to the default_url column
+  <ul>
+    <li>if the campaign is in status "running", redirect using the redirect_url column</li>
+    <li>if the campaign is in status "stopped", redirect to the default_url column</li>
+  </ul>
 </p>
