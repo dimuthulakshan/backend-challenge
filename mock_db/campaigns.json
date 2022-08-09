@@ -1,0 +1,38 @@
+[
+  {
+    "campaign_id": 195,
+    "redirect_url": "https://www.ryobi.com.au/power-tools/products/details/600w-biscuit-joiner-ebj900rg?list=all_products&list_name=All+Products",
+    "default_url": "https://www.ryobi.com.au",
+    "campaign_name": "Ryobi - Biscuit Joiner",
+    "rule_name": "sequnce_of_taps",
+    "campaign_description": "Play Area page in each sales kit",
+    "product_id": 101,
+    "status": "running",
+    "created_at": "2021-05-12T02:19:32.828Z",
+    "updated_at": "2021-09-29T02:35:15.476Z"
+  },
+  {
+    "campaign_id": 196,
+    "redirect_url": "https://www.makita.com.au/building-construction/category/cutting/circular-plunge-cut-saws/hs009gz01-40v-max-brushless-235mm-9-1-4-circular-saw",
+    "default_url": "https://www.makita.com.au",
+    "campaign_name": "Makita - Circular Plunge",
+    "rule_name": "sequnce_of_taps",
+    "campaign_description": "",
+    "product_id": 110,
+    "status": "running",
+    "created_at": "2021-05-12T06:01:23.007Z",
+    "updated_at": "2021-08-16T01:13:39.205Z"
+  },
+  {
+    "campaign_id": 197,
+    "redirect_url": "https://ozito.com.au/products/pxc-18v-multi-function-tool/",
+    "default_url": "https://www.ozito.com.au",
+    "campaign_name": "Ozito - Multi Function Tool",
+    "rule_name": "sequnce_of_taps",
+    "campaign_description": "",
+    "product_id": 113,
+    "status": "stopped",
+    "created_at": "2021-05-12T06:06:40.294Z",
+    "updated_at": "2021-08-03T03:38:47.601Z"
+  }
+]
