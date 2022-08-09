@@ -7,6 +7,11 @@
 </p>
 
 <p>
+ Phygiworld manages QR codes in "rolls". Rolls are groups of several unique QR codes, each of them identified by a unique ID.
+ Furthermore, Phygiworld has "campaigns" to manage one or more of these rolls and define its redirection rules.
+</p>
+
+<p>
   As a developer of Phygiworld you are tasked to implement the core middleware
   endpoint that runs when a user scans a QR code.<br />
   This function receives the QR code ID as an input and should redirect to the URL that
