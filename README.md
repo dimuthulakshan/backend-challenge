@@ -1,7 +1,7 @@
 <h1>Smart Codes</h1>
 
 <p>
-  Phygiworld is a startup that transforma QR Codes into smart QR codes.<br />
+  Phygiworld is a startup that transforms QR Codes into smart QR codes.<br />
   Standard QR codes are connected to static web URLs (e.g. https://mysite.com).
   With Phygiworld, instead, each QR code can load dynamic URLs that can be changed even after the QR is printed.
 </p>
@@ -14,7 +14,7 @@
 
 <p>
   Edit the index.js file and implement the <b>"/scan/:codeId"</b> endpoint so that it redirects to the correct URL defined in the campaign.
-  Use the repositories available to query data in the database as needed.
+  Use the repositories available to query data in the database as needed. All data is mocked and stored in JSON files in the mock_data directory.
   Below is a schema of the database tables.
 </p>
 
