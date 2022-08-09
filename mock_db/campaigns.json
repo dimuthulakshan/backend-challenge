@@ -1,7 +1,7 @@
 [
   {
     "campaign_id": 195,
-    "redirect_url": "https://www.ryobi.com.au/power-tools/products/details/600w-biscuit-joiner-ebj900rg?list=all_products&list_name=All+Products",
+    "redirect_url": "https://www.ryobi.com.au/power-tools/products/details/600w-biscuit-joiner-ebj900rg",
     "default_url": "https://www.ryobi.com.au",
     "campaign_name": "Ryobi - Biscuit Joiner",
     "rule_name": "sequnce_of_taps",
