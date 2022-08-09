@@ -35,3 +35,11 @@ You can test the API by opening:
 1. http://localhost:4000/scan/4Ns_mH4a should redirect to https://www.ryobi.com.au/power-tools/products/details/600w-biscuit-joiner-ebj900rg
 2. http://localhost:4000/scan/ABw0T6Vk should redirect to https://ozito.com.au/products/pxc-18v-multi-function-tool/
 3. http://localhost:4000/scan/uXlsA0F4 should redirect to https://www.makita.com.au/building-construction/category/cutting/circular-plunge-cut-saws/hs009gz01-40v-max-brushless-235mm-9-1-4-circular-saw
+
+<h1>Bonus</h1>
+
+<p>
+  Modify the endpoint logic so that:
+  - if the campaign is in status "running", redirect using the redirect_url column
+  - if the campaign is in status "stopped", redirect to the default_url column
+</p>
