@@ -52,11 +52,16 @@ You can test the API by opening:
 
 <p>
   Edit the file cron.js and implement the calculateIsLive() function.
-  This function needs to determine if an app is live or not.
-  An app is defined by its main URL, which is also referenced in the campaigns.
-  An app is live in two cases:
-  - if the campaign that redirects to the app is live (status = "running").
-  - if another app is live and links to it
+
+This function needs to determine if an app is live or not.
+An app is defined by its main URL, which is also referenced in the campaigns.
+
+An app is live in two cases:
+
+  <ul>
+    <li>if the campaign that redirects to the app is live (status = "running").</li>
+    <li>if another app is live and links to it</li>
+  </ul>
 
 Note that campaigns only reference apps by their links (not by their IDs).
 For example, campaign 195 redirects to app 1 because it redirects to the same URL https://proqure-app.com/wine-brand/educational/premium-wine-2020.
