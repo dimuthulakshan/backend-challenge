@@ -42,7 +42,7 @@ You can test the API by opening:
 
 <a href="http://localhost:4000/scan/4Ns_mH4a">http://localhost:4000/scan/4Ns_mH4a</a>
 
-<h1>Tests</h1>
+<h3>Tests</h3>
 
 1. http://localhost:4000/scan/4Ns_mH4a should redirect to https://proqure-app.com/wine-brand/educational/premium-wine-2020
 2. http://localhost:4000/scan/ABw0T6Vk should redirect to https://wine-brand-abc.com/ (the campaign is stopped so it redirects to the default_url)
@@ -67,3 +67,11 @@ Note that campaigns only reference apps by their links (not by their IDs).
 For example, campaign 195 redirects to app 1 because it redirects to the same URL https://proqure-app.com/wine-brand/educational/premium-wine-2020.
 
 </p>
+
+<h3>Output</h3>
+
+1. App 1 is LIVE because campaign 195 links to it and is running.
+2. App 2 is LIVE because campaign 196 links to it and is running.
+3. App 3 is LIVE because App 1 is live and links to App 3 (even though there is no running campaigns that directly link to it)
+4. App 4 is LIVE because App 3 is live and links to App 4 (even though there is no running campaigns that directly link to it)
+5. App 5 is NOT LIVE
