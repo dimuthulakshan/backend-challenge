@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "url": "https://proqure-app.com/wine-brand/educational/premium-wine-2020",
+    "links": [
+      "https://proqure-app.com/wine-brand/reordering/premium-wine-2020"
+    ],
+    "is_live": false
+  },
+  {
+    "id": 2,
+    "url": "https://proqure-app.com/wine-brand/survey/premium-wine-2020-feedback",
+    "links": [],
+    "is_live": false
+  },
+  {
+    "id": 3,
+    "url": "https://proqure-app.com/wine-brand/reordering/premium-wine-2020",
+    "links": ["https://proqure-app.com/wine-brand/reordering/budget-wine-2019"],
+    "is_live": false
+  },
+  {
+    "id": 4,
+    "url": "https://proqure-app.com/wine-brand/reordering/budget-wine-2019",
+    "links": [],
+    "is_live": false
+  },
+  {
+    "id": 5,
+    "url": "https://proqure-app.com/wine-brand/educational/budget-wine-2019",
+    "links": ["https://proqure-app.com/wine-brand/reordering/budget-wine-2019"],
+    "is_live": false
+  }
+]

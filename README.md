@@ -1,4 +1,6 @@
-<h1>Smart Codes</h1>
+<h1>Smart Codes & Live Apps</h1>
+
+<h2>Introduction</h2>
 
 <p>
   Phygiworld is a startup that transforms QR Codes into smart QR codes.<br />
@@ -9,11 +11,15 @@
 <p>
  Phygiworld manages QR codes in "rolls". Rolls are groups of several unique QR codes, each of them identified by a unique ID.
  Furthermore, Phygiworld has "campaigns" to manage one or more of these rolls and define its redirection rules.
+ Each campaign has a status (running or stopped). 
+ If the campaign is "running", the system redirects the users to "redirect_url".
+ If the campaign is "stopped", the system redirects the users to "default_url".
 </p>
 
+<h2>Exercise 1</h2>
+
 <p>
-  As a developer of Phygiworld you are tasked to implement the core middleware
-  endpoint that runs when a user scans a QR code.<br />
+  You are tasked to implement the core middleware endpoint that runs when a user scans a QR code.<br />
   This function receives the QR code ID as an input and should redirect to the URL that
   is configured in the related campaign.</p>
 
@@ -38,16 +44,21 @@ You can test the API by opening:
 
 <h1>Tests</h1>
 
-1. http://localhost:4000/scan/4Ns_mH4a should redirect to https://www.ryobi.com.au/power-tools/products/details/600w-biscuit-joiner-ebj900rg
-2. http://localhost:4000/scan/ABw0T6Vk should redirect to https://ozito.com.au/products/pxc-18v-multi-function-tool/
-3. http://localhost:4000/scan/uXlsA0F4 should redirect to https://www.makita.com.au/building-construction/category/cutting/circular-plunge-cut-saws/hs009gz01-40v-max-brushless-235mm-9-1-4-circular-saw
+1. http://localhost:4000/scan/4Ns_mH4a should redirect to https://proqure-app.com/wine-brand/educational/premium-wine-2020
+2. http://localhost:4000/scan/ABw0T6Vk should redirect to https://wine-brand-abc.com/ (the campaign is stopped so it redirects to the default_url)
+3. http://localhost:4000/scan/uXlsA0F4 should redirect to https://proqure-app.com/wine-brand/survey/premium-wine-2020-feedback
 
-<h1>Bonus</h1>
+<h2>Exercise 2</h2>
 
 <p>
-  Modify the endpoint logic so that:
-  <ul>
-    <li>if the campaign is in status "running", redirect to the redirect_url</li>
-    <li>if the campaign is in status "stopped", redirect to the default_url</li>
-  </ul>
+  Edit the file cron.js and implement the calculateIsLive() function.
+  This function needs to determine if an app is live or not.
+  An app is defined by its main URL, which is also referenced in the campaigns.
+  An app is live in two cases:
+  - if the campaign that redirects to the app is live (status = "running").
+  - if another app is live and links to it
+
+Note that campaigns only reference apps by their links (not by their IDs).
+For example, campaign 195 redirects to app 1 because it redirects to the same URL https://proqure-app.com/wine-brand/educational/premium-wine-2020.
+
 </p>
