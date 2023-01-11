@@ -1,11 +1,16 @@
 var qrCodes = require("../mock_db/qr_codes.json");
 
 function getAllCodes() {
-  return qrCodes;
+  // fake delay to simulate db access
+  return new Promise((resolve) =>
+    setTimeout(() => {
+      resolve(qrCodes);
+    }, 100)
+  );
 }
 
-function getCodeById(id) {
-  const qrCodes = getAllCodes();
+async function getCodeById(id) {
+  const qrCodes = await getAllCodes();
   return qrCodes.find((x) => x._id === id);
 }
 

@@ -1,11 +1,16 @@
 var campaigns = require("../mock_db/campaigns.json");
 
 function getAllCampaigns() {
-  return campaigns;
+  // fake delay to simulate db access
+  return new Promise((resolve) =>
+    setTimeout(() => {
+      resolve(campaigns);
+    }, 100)
+  );
 }
 
-function getCampaignById(id) {
-  const allTags = getAllCampaigns();
+async function getCampaignById(id) {
+  const allTags = await getAllCampaigns();
   return allTags.find((x) => x.campaign_id === id);
 }
 
