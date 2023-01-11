@@ -75,3 +75,10 @@ For example, campaign 195 redirects to app 1 because it redirects to the same UR
 3. App 3 is LIVE because App 1 is live and links to App 3 (even though there is no running campaigns that directly link to it)
 4. App 4 is LIVE because App 3 is live and links to App 4 (even though there is no running campaigns that directly link to it)
 5. App 5 is NOT LIVE
+
+<h3>Important Note</h3>
+
+<p>
+Consider Big-O factor when implementing this algorithm.
+How will your function perform at scale (e.g. when the apps list has millions of elements)?
+</p>
