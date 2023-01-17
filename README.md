@@ -70,11 +70,12 @@ For example, campaign 195 redirects to app 1 because it redirects to the same UR
 
 <h3>Expected Output</h3>
 
-1. App 1 is LIVE because campaign 195 links to it and is running.
-2. App 2 is LIVE because campaign 196 links to it and is running.
-3. App 3 is LIVE because App 1 is live and links to App 3 (even though there is no running campaigns that directly link to it)
-4. App 4 is LIVE because App 3 is live and links to App 4 (even though there is no running campaigns that directly link to it)
-5. App 5 is NOT LIVE
+1. App 1 is LIVE because App 2 is live and links to App 1
+2. App 2 is LIVE because campaign 195 links to it and is running.
+3. App 3 is LIVE because campaign 196 links to it and is running.
+4. App 4 is LIVE because App 2 is live and links to App 4 (even though there is no running campaigns that directly link to it)
+5. App 5 is LIVE because App 4 is live and links to App 5 (even though there is no running campaigns that directly link to it)
+6. App 6 is NOT LIVE
 
 <h3>Important Note</h3>
 
