@@ -15,10 +15,47 @@ const appsRepository = require("./repositories/apps-repository");
  *
  * @param sites
  */
-function calculateIsLive() {
-  const campaigns = campaignRepository.getAllCampaigns();
-  const apps = appsRepository.getAllApps();
-  // write your code here...
+async function calculateIsLive() {
+  try {
+    // Fetch campaigns and apps (assuming they are async operations)
+    const campaigns = await campaignRepository.getAllCampaigns();
+    const apps =  appsRepository.getAllApps();
+
+    // Extract live campaign URLs
+    const liveCampaignUrls = new Set(
+      campaigns
+        .filter(campaign => campaign.status === 'running')
+        .map(campaign => campaign.redirect_url)
+    );
+
+    // Define a function to extract live URLs based on a given condition
+    const extractLiveUrls =(apps, condition)=>{
+      return new Set(
+        apps
+          .filter(app => condition(app))
+          .flatMap(app => [app.url, ...app.links])
+      );
+    }
+
+    // Extract live app URLs
+    const liveAppsUrls = extractLiveUrls(apps, app => liveCampaignUrls.has(app.url) || app.links.some(link => liveCampaignUrls.has(link)));
+    
+    // Extract inherited live app URLs
+    const iliveAppsUrls = extractLiveUrls(apps, app => liveAppsUrls.has(app.url) || app.links.some(link => liveAppsUrls.has(link)));
+
+    // Update apps with is_live property
+    for (let app of apps) {
+      const isLiveNow = iliveAppsUrls.has(app.url);
+      if (app.is_live !== isLiveNow) {
+        app.is_live = isLiveNow;
+        appsRepository.saveApp(app);
+      }
+    }
+  
+  } catch (error) {
+    console.error('Error calculating is_live:', error);
+  }
 }
+
 
 calculateIsLive();
